@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.section-faq {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* Без text-align h2 никак нормально не отцентрировать*/
+    text-align: center;
+    margin-top: 100px;
+    gap: 100px;
+}
+
+.h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+
+}
+
+.header {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-faq__wrapper {
+    display: grid;
+    gap: 10px;
+}
+
+.faq-item {
+    text-align: left;
+    display: grid;
+    width: 1170px;
+    grid-template: auto / 70px auto;
+}
+
+.label-item {
+    display: grid;
+    min-width: 70px;
+    min-height: 70px;
+    background-color: #FFDD2D;
+    justify-content: center;
+    align-content: center;
+}
+
+.label-item__text {
+    color: #FFFFFF;
+}
+
+.text--rotated {
+    display: none;
+}
+
+.opened .label-item__text {
+    display: none;
+}
+
+.opened .text--rotated {
+    display: flex;
+    rotate: -90deg;
+}
+
+
+.faq-item__content {
+    position: relative;
+    display: grid;
+    border: #E4E4E4 solid 1px;
+    border-left: none;
+}
+
+.h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.faq-item__h3 {
+    margin: 25px 30px 25px 25px;
+}
+
+.content__paragraph-text {
+    display: none;
+    margin: 0 30px 25px 25px;
+}
+
+.opened .content__paragraph-text{
+    display: flex;
+    max-width: 1000px;
+    line-height: 24px;
+}
+
+.faq-item__content::before {
+    position: absolute;
+    right: 70px;
+    top: 24px;
+    content: url("/images/+.svg");
+}
+
+.opened .faq-item__content::before {
+    top: 22px;
+    content: url("/images/-.svg")
+}
+
+
+
+
